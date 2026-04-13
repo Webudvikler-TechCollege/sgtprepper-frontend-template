@@ -1,4 +1,5 @@
-export const HomePage = () => {
-    console.log('Hej verden');
-    
+import homeView from "../views/pages/homeView.js";
+
+export function homeController() {
+  homeView();
 }

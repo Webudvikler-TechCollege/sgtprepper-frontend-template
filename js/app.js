@@ -1,8 +1,13 @@
-import { HomePage } from './controllers/homeController.js';
-import { router } from './router/index.js';
+import renderHeader from "./views/partials/headerView.js"
+import { initRouter } from "./router/router.js"
+import renderNav from "./views/partials/navView.js"
+import renderFooter from "./views/partials/footerView.js"
 
-const ROOT = document.getElementById("container");
+const initApp = () => {
+  renderHeader()
+  renderNav()
+  renderFooter()
+  initRouter()
+}
 
-router({
-  '/': () => HomePage(), // /index.htm
-}, '#app');
+initApp()

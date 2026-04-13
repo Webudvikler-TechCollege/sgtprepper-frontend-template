@@ -5,11 +5,10 @@ De repræsenterer tydelige dele af en side, fx et kort, en formular eller et nav
 
 Eksempler:
 
-* LayoutView
-* ProductView
+* MapView
 * LoginView
 
 ## Placering:
 ```
-/js/view/organisms/
+/js/view/components/organisms/
 ```

@@ -10,5 +10,5 @@ Eksempler:
 
 ## Placering:
 ```
-/js/views/molecules/
+/js/views/components/molecules/
 ```
