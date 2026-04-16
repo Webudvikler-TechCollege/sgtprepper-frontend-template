@@ -1,20 +1,31 @@
 # Router
-Routeren styrer, hvilket view (side) der vises i browseren, baseret på URL’ens hash (f.eks. #/products, #/login).
 
-Når hash’en ændres, udskiftes indholdet i et bestemt HTML-element — uden at siden genindlæses.
+Routeren styrer, hvilken side der skal vises i browseren, ud fra URL’ens hash.  
+Det kan for eksempel være ruter som `#/products` eller `#/login`.
 
-Den matcher hash’en med en liste af ruter og viser det tilsvarende view.
-Hvis ruten ikke findes, vises en standard- eller “Not Found”-side.
+Når hash’en i URL’en ændrer sig, bliver indholdet på siden opdateret med JavaScript, uden at hele siden genindlæses.
 
-Routeren gør det muligt at navigere mellem flere sider i en single-page-applikation (SPA), hvor alt indhold håndteres med JavaScript.
+Routeren læser den aktuelle hash, matcher den med de ruter der findes i projektet, og kalder den controller eller det view, der hører til ruten.
+
+Hvis ruten ikke findes, vises en standardside med en fejlbesked, for eksempel “Side ikke fundet”.
+
+På den måde kan vi lave navigation mellem flere sider i en single-page-applikation (SPA), selv om vi kun arbejder med én HTML-side.
+
+## Typisk ansvar:
+
+- Lytte efter ændringer i URL’ens hash
+- Vælge hvilken controller eller side der skal vises
+- Udskifte indholdet i appens root-element
+- Vise en fallback-side hvis ruten ikke findes
 
 ## Bemærk
-Denne router er en *hash-router* og skrevet særligt til dette projekt. Det betyder at vi arbejder med nogle lidt specielle url'er:
 
-**Eksempel**
-```
+Denne router er en **hash-router** og er lavet særligt til dette projekt.  
+Det betyder, at vi arbejder med URL’er der indeholder `#`.
+
+**Eksempler:**
+
+```txt
 http://127.0.0.1:5500/index.htm#/products
-
 http://127.0.0.1:5500/index.htm#/cart
 ```
-Når vi skal arbejde med routers i Express og React ser det lidt anderledes ud og her vil vi kunne bruge normale url'er igen.
