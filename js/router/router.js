@@ -1,5 +1,5 @@
 import { homeController } from "../controllers/homeController.js";
-import { clearMain } from "../utils/index.js";
+import { clearElement } from "../utils/dom.js";
 
 export function initRouter() {
     window.addEventListener("hashchange", handleRoute);
@@ -7,7 +7,7 @@ export function initRouter() {
 }
 
 function handleRoute() {
-    clearMain()
+    clearElement('root')
 
     const hash = window.location.hash || "#/";
     const cleanHash = hash.replace(/^#\/?/, "")
