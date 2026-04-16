@@ -4,9 +4,6 @@
  * @returns {string} - Fx "kr. 100,00"
  */
 export const price2Dkk = value => {
-  // Tjekker om værdien er et gyldigt tal
-  if (typeof value !== 'number' || isNaN(value)) return '';
-
   // Formaterer tallet til dansk valuta
   return new Intl.NumberFormat('da-DK', {
     style: 'currency',      // Formatter som valuta

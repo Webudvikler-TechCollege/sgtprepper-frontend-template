@@ -13,10 +13,10 @@ På den måde kan vi lave navigation mellem flere sider i en single-page-applika
 
 ## Typisk ansvar:
 
-- Lytte efter ændringer i URL’ens hash
+- Lytte efter ændringer i URL’ens hash (#)
 - Vælge hvilken controller eller side der skal vises
 - Udskifte indholdet i appens root-element
-- Vise en fallback-side hvis ruten ikke findes
+- Vise en 404 fallback-side hvis ruten ikke findes
 
 ## Bemærk
 
@@ -27,5 +27,7 @@ Det betyder, at vi arbejder med URL’er der indeholder `#`.
 
 ```txt
 http://127.0.0.1:5500/index.htm#/products
+http://127.0.0.1:5500/index.htm#/products/vand-og-vandrensning
+http://127.0.0.1:5500/index.htm#/products/vand-og-vandrensning/
 http://127.0.0.1:5500/index.htm#/cart
 ```
