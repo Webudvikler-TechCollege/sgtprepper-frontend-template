@@ -1,5 +1,5 @@
-import homeView from "../views/pages/homeView.js";
+import renderHomePage from "../views/pages/homePage.js";
 
 export function homeController() {
-  homeView();
+  renderHomePage();
 }

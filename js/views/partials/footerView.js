@@ -1,6 +1,6 @@
-const renderFooter = async () => {
+const createFooter = () => {
     const footer = document.querySelector('#footer')
-    footer.innerText = 'Footer'
+    footer.innerHTML = '&copy; TechCollege'
 }
 
-export default renderFooter
+export default createFooter

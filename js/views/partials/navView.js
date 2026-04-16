@@ -1,6 +1,6 @@
-const renderNav = async () => {
+const createNav = async () => {
     const nav = document.querySelector('#nav')
     nav.innerText = 'Navigation'
 }
 
-export default renderNav
+export default createNav

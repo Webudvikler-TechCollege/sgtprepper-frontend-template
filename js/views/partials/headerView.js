@@ -1,9 +1,9 @@
-import { Heading } from "../components/atoms/index.js"
+import { createHeading } from "../components/atoms/index.js"
 
-const renderHeader = () => {
+const createHeader = () => {
     const header = document.querySelector('#header')
-    const h1 = Heading(1, 'Sgt. Prepper', 'text-2xl font-bold')
+    const h1 = createHeading(1, 'Sgt. Prepper', 'text-2xl font-bold')
     header.append(h1)
 }
 
-export default renderHeader
+export default createHeader
